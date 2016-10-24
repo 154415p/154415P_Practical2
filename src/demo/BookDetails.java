@@ -15,6 +15,7 @@ public class BookDetails {
     private String description = null;
     private int inventory = 0;
 
+
     public String getBookId() {
         return bookId;
     }

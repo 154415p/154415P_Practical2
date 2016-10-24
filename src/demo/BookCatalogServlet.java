@@ -11,8 +11,8 @@ import java.io.PrintWriter;
 /**
  * Created by 154415p on 10/24/2016.
  */
-@WebServlet(name = "HomeServlet" , urlPatterns = "/bookstore")
-public class HomeServlet extends HttpServlet {
+@WebServlet(name = "BookCatalogServlet", urlPatterns = "/bookcatalog")
+public class BookCatalogServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -36,8 +36,20 @@ public class HomeServlet extends HttpServlet {
                 "<font size=\"+3\" color=\"black\">Bookstore</font>" + "</h1>" +
                 "</center>" + "<br> &nbsp; <hr> <br> ");
 
-        buffer.append("<b>What we are reading</b>" + "<p>" +
+        buffer.append("<b>Please choose from our sections</b>" + "<p>" +
                 "<blockquote><em><a href=\"" +
+                "bookdetails?bookId=203" + "\">" + bd.getTitle() +
+                "</a></em>" + bd.getDescription() + "</blockquote>");
+
+        buffer.append("<blockquote><em><a href=\"" +
+                "bookdetails?bookId=203" + "\">" + bd.getTitle() +
+                "</a></em>" + bd.getDescription() + "</blockquote>");
+
+        buffer.append("<blockquote><em><a href=\"" +
+                "bookdetails?bookId=203" + "\">" + bd.getTitle() +
+                "</a></em>" + bd.getDescription() + "</blockquote>");
+
+        buffer.append("<blockquote><em><a href=\"" +
                 "bookdetails?bookId=203" + "\">" + bd.getTitle() +
                 "</a></em>" + bd.getDescription() + "</blockquote>");
 
